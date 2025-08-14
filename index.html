@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Molina Srl — Bienes Raices</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#16a355;--muted:#6b7280;--bg:#f7f8fb}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;line-height:1.4;color:#0f1724;margin:0;background:var(--bg)}
+    header{background:white;box-shadow:0 6px 18px rgba(12,16,22,0.06);position:sticky;top:0;z-index:40}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:url(logomoli.jpg);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:16px;color:var(--muted);text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:56px 0}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 10px}
+    .lead{color:var(--muted);margin-bottom:18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:600;text-decoration:none;display:inline-block;text-align:center}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid #e6e9ef;color:var(--accent)}
+    .card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(12,16,22,0.06)}
+
+    /* Properties grid */
+    .properties{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:20px}
+    .prop-img{height:140px;border-radius:10px;background:#e9eefc;display:block;overflow:hidden}
+    .prop-meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
+
+    footer{padding:30px 0;color:var(--muted);font-size:14px}
+    
+
+    /* Responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.contact{grid-template-columns:1fr}.container{padding:18px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">
+  <img src="logomoli.jpg" alt="Molina SRL" style="width:48px; height:48px; border-radius:8px;">
+</div>
+
+        <div>
+          <div style="font-weight:700">Molina Srl</div>
+          <div style="font-size:12px;color:var(--muted)">Bienes Raices</div>
+        </div>
+      </div>
+      <nav aria-label="principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#creaciondoc">Documento</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Soluciones inmobiliarias y gestoría pensado para tu tranquilidad</h1>
+        <p class="lead">Compra, venta y administración de propiedades en Santa Cruz — asesoría legal y trámites administrativos con experiencia y transparencia.</p>
+        <div class="cta">
+          <a href="#propiedades" class="btn btn-primary">Ver propiedades destacadas</a>
+          <a href="https://wa.me/59169270000?text=Hola%2C%20quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" class="btn btn-ghost">Solicitar asesoría por WhatsApp</a>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <strong>Horario:</strong> Lun–Vie 9:00–18:00 · <strong>Tel:</strong> +591 69270000
+        </div>
+      </div>
+
+    </section>
+
+    <section id="propiedades">
+      <h2>Propiedades destacadas</h2>
+      <div class="properties">
+        <div class="card">
+          <div class="prop-img"><img src="Captura.JPG" alt="Departamento céntrico" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div style="margin-top:10px">
+            <div style="font-weight:700">Departamento céntrico - 3 hab</div>
+            <div class="prop-meta"><span style="color:var(--muted)">Santa Cruz</span><strong>$95,000</strong></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="prop-img"><img src="aaaa.JPG" alt="Casa con jardín" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div style="margin-top:10px">
+            <div style="font-weight:700">Casa con jardín - Zona Norte</div>
+            <div class="prop-meta"><span style="color:var(--muted)">Zona Norte</span><strong>$140,000</strong></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="prop-img"><img src="boronboron.jpg" alt="Terreno" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div style="margin-top:10px">
+            <div style="font-weight:700">Papeles al dia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" style="margin-top:28px">
+      <h2>Servicios</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px">
+        <div class="card"><strong>Venta de lotes</strong><p style="color:var(--muted);margin-top:6px">Acompañamiento desde la negociación hasta la escritura.</p></div>
+        <div class="card"><strong>Gestoría</strong><p style="color:var(--muted);margin-top:6px">Trámites municipales, catastros y documentación legal.</p></div>
+        <div class="card"><strong>Administración</strong><p style="color:var(--muted);margin-top:6px">Gestión de alquileres y mantenimiento de inmuebles.</p></div>
+      </div>
+    </section>
+
+    <section style="margin-top:28px">
+
+  <!-- Videos de TikTok -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:20px">
+    <div class="card" style="padding:0;overflow:hidden">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sanmiguel3y4/video/7532596749643336966" data-video-id="7532596749643336966" style="max-width: 100%;min-width:300px;">
+        <section></section>
+      </blockquote>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sanmiguel3y4/video/7530704690435165445" data-video-id="7530704690435165445" style="max-width: 100%;min-width:300px;">
+        <section></section>
+      </blockquote>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sanmiguel3y4/video/7530702230601747768" data-video-id="7530702230601747768" style="max-width: 100%;min-width:300px;">
+        <section></section>
+      </blockquote>
+    </div>
+  </div>
+      <!-- Sección Creación de Documento -->
+    <section id="creaciondoc" style="margin-top:28px">
+      <h2>Creación de Documento</h2>
+      <div class="card" style="max-width:500px; margin:0 auto;">
+        <form id="form-documento" 
+              action="https://formspree.io/f/mnnzrqyk" 
+              method="POST">
+
+          <label>Nombre:</label>
+          <input type="text" name="nombre" required placeholder="Tu nombre">
+
+          <label style="margin-top:8px">Correo electrónico:</label>
+          <input type="email" name="correo" required placeholder="correo@ejemplo.com">
+
+          <label style="margin-top:8px">Tipo de documento:</label>
+          <select name="tipo" required>
+            <option value="">Seleccione una opción</option>
+            <option value="contrato">Contrato</option>
+            <option value="carta">Carta</option>
+            <option value="otro">Otro</option>
+          </select>
+
+          <label style="margin-top:8px">Detalles:</label>
+          <textarea name="detalles" rows="4" required placeholder="Describe el documento que necesitas"></textarea>
+
+          <div style="margin-top:12px">
+            <button type="submit" class="btn btn-primary" style="width:100%">Enviar solicitud</button>
+          </div>
+
+          <p id="mensaje-exito" style="color: green; font-weight: bold; display: none; margin-top: 15px; text-align: center;">
+            ✅ ¡Documento solicitado correctamente!
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <script>
+    document.getElementById("form-documento").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let form = e.target;
+      let datos = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: datos,
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          document.getElementById("mensaje-exito").style.display = "block";
+          form.reset();
+        } else {
+          alert("❌ Hubo un error al enviar la solicitud. Inténtalo nuevamente.");
+        }
+      }).catch(() => {
+        alert("⚠ Error de conexión. Por favor revisa tu internet.");
+      });
+    });
+    </script>
+
+
+    <section id="contacto" style="margin-top:28px">
+      <h2>Ubicacion</h2>
+      <div class="card contact">
+        <div>
+          <div style="margin-bottom:8px"><strong>Oficina</strong><div style="color:var(--muted)">Av. Viedma #600, Santa Cruz</div></div>
+          <div style="margin-bottom:8px"><strong>Tel</strong><div style="color:var(--muted)">+591 69270000</div></div>
+          <div style="margin-bottom:8px"><strong>Email</strong><div style="color:var(--muted)">molinasrlsm@gmail.com</div></div>
+          <div style="margin-top:12px;border-radius:8px;overflow:hidden">
+<iframe src="https://www.google.com/maps/embed?pb=!4v1755042281382!6m8!1m7!1stZoszPkdoZ0zCXh1dVa_7A!2m2!1d-17.78895469068037!2d-63.17161621480017!3f332.83970041897874!4f-13.92039760366606!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <div>© Bienes Raices MolinaSRL</div>
+      <div>Desarrollado por: <strong>Molina</strong></div>
+    </div>
+  </footer>
+   <script async src="https://www.tiktok.com/embed.js"></script>
+</body>
+</html>
