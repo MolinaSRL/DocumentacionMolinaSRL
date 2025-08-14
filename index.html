@@ -1,246 +1,265 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Molina Srl — Bienes Raices</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--accent:#16a355;--muted:#6b7280;--bg:#f7f8fb}
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;line-height:1.4;color:#0f1724;margin:0;background:var(--bg)}
-    header{background:white;box-shadow:0 6px 18px rgba(12,16,22,0.06);position:sticky;top:0;z-index:40}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:48px;height:48px;border-radius:8px;background:url(logomoli.jpg);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-    nav a{margin-left:16px;color:var(--muted);text-decoration:none;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:56px 0}
-    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 10px}
-    .lead{color:var(--muted);margin-bottom:18px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:600;text-decoration:none;display:inline-block;text-align:center}
-    .btn-primary{background:var(--accent);color:white}
-    .btn-ghost{background:transparent;border:1px solid #e6e9ef;color:var(--accent)}
-    .card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(12,16,22,0.06)}
-
-    /* Properties grid */
-    .properties{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:20px}
-    .prop-img{height:140px;border-radius:10px;background:#e9eefc;display:block;overflow:hidden}
-    .prop-meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
-
-    /* Contact */
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
-    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
-
-    footer{padding:30px 0;color:var(--muted);font-size:14px}
-    .map-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* Relación 16:9 */
-  height: 0;
-  overflow: hidden;
-  border-radius: 8px; /* opcional */
-}
-
-.map-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-    
-
-    /* Responsive */
-    @media (max-width:900px){.hero{grid-template-columns:1fr;}.contact{grid-template-columns:1fr}.container{padding:18px}}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOLINA SRL - Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">
-  <img src="logomoli.jpg" alt="Molina SRL" style="width:48px; height:48px; border-radius:8px;">
-</div>
+<body class="bg-neutral-50 text-neutral-900">
 
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-emerald-600 flex items-center justify-center text-white font-bold">M</div>
         <div>
-          <div style="font-weight:700">Molina Srl</div>
-          <div style="font-size:12px;color:var(--muted)">Bienes Raices</div>
+          <p class="text-sm tracking-wide text-neutral-500">Bienes Raíces y Servicios</p>
+          <h1 class="text-base font-semibold">MOLINA SRL</h1>
         </div>
       </div>
-      <nav aria-label="principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#propiedades">Propiedades</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#creaciondoc">Documento</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#servicios" class="hover:text-emerald-700">Servicios</a>
+        <a href="#confianza" class="hover:text-emerald-700">Confianza</a>
+        <a href="#casos" class="hover:text-emerald-700">Casos</a>
+        <a href="#contacto" class="hover:text-emerald-700">Contacto</a>
       </nav>
+      <a href="https://wa.me/59169270000" class="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-emerald-700">
+        WhatsApp
+      </a>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
+  <!-- Hero -->
+  <section class="relative">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h1>Soluciones inmobiliarias y gestoría pensado para tu tranquilidad</h1>
-        <p class="lead">Compra, venta y administración de propiedades en Santa Cruz — asesoría legal y trámites administrativos con experiencia y transparencia.</p>
-        <div class="cta">
-          <a href="#propiedades" class="btn btn-primary">Ver propiedades destacadas</a>
-          <a href="https://wa.me/59169270000?text=Hola%2C%20quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" class="btn btn-ghost">Solicitar asesoría por WhatsApp</a>
+        <span class="inline-block rounded-full bg-emerald-100 text-emerald-800 px-3 py-1 text-xs font-semibold">Santa Cruz • Papeles al día</span>
+        <h2 class="mt-4 text-4xl md:text-5xl font-extrabold leading-[1.1]">
+          Gestoría y Asesoría Inmobiliaria <span class="text-emerald-700">MOLINA SRL</span>
+        </h2>
+        <p class="mt-4 text-neutral-700 text-lg">
+          Trámites sin estrés: derecho propietario, saneamiento, catastro y representación ante notaría, Alcaldía, DDRR e INRA. Compra, vende o regulariza con total seguridad.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="#contacto" class="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-5 py-3 text-white font-semibold shadow-sm hover:bg-emerald-700">
+            Iniciar gestión
+          </a>
+          <a href="#servicios" class="inline-flex items-center gap-2 rounded-2xl border border-neutral-300 px-5 py-3 text-neutral-800 font-semibold hover:border-neutral-400">
+            Ver servicios
+          </a>
         </div>
-
-        <div class="card" style="margin-top:20px">
-          <strong>Horario:</strong> Lun–Vie 9:00–18:00 · <strong>Tel:</strong> +591 69270000
+        <div class="mt-6 flex items-center gap-4 text-sm text-neutral-600">
+          <div class="flex items-center gap-2">27 años de confianza</div>
+          <div class="flex items-center gap-2">Papeles al día</div>
+          <div class="flex items-center gap-2">Atención personalizada</div>
         </div>
       </div>
-
-    </section>
-
-    <section id="propiedades">
-      <h2>Propiedades destacadas</h2>
-      <div class="properties">
-        <div class="card">
-          <div class="prop-img"><img src="Captura.JPG" alt="Departamento céntrico" style="width:100%;height:100%;object-fit:cover" /></div>
-          <div style="margin-top:10px">
-            <div style="font-weight:700">Departamento céntrico - 3 hab</div>
-            <div class="prop-meta"><span style="color:var(--muted)">Santa Cruz</span><strong>$95,000</strong></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="prop-img"><img src="aaaa.JPG" alt="Casa con jardín" style="width:100%;height:100%;object-fit:cover" /></div>
-          <div style="margin-top:10px">
-            <div style="font-weight:700">Casa con jardín - Zona Norte</div>
-            <div class="prop-meta"><span style="color:var(--muted)">Zona Norte</span><strong>$140,000</strong></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="prop-img"><img src="boronboron.jpg" alt="Terreno" style="width:100%;height:100%;object-fit:cover" /></div>
-          <div style="margin-top:10px">
-            <div style="font-weight:700">Papeles al dia</div>
+      <div>
+        <div class="relative rounded-3xl overflow-hidden shadow-xl border border-neutral-200">
+          <img src="clienterevi.jpg" alt="Clientes revisando documentos en oficina" class="h-full w-full object-cover">
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+            <p class="text-white text-sm">Confianza real: títulos verificados y procesos transparentes.</p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="servicios" style="margin-top:28px">
-      <h2>Servicios</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px">
-        <div class="card"><strong>Venta de lotes</strong><p style="color:var(--muted);margin-top:6px">Acompañamiento desde la negociación hasta la escritura.</p></div>
-        <div class="card"><strong>Gestoría</strong><p style="color:var(--muted);margin-top:6px">Trámites municipales, catastros y documentación legal.</p></div>
-        <div class="card"><strong>Administración</strong><p style="color:var(--muted);margin-top:6px">Gestión de alquileres y mantenimiento de inmuebles.</p></div>
-      </div>
-    </section>
-
-    <section style="margin-top:28px">
-
-  <!-- Videos de TikTok -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:20px">
-    <div class="card" style="padding:0;overflow:hidden">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sanmiguel3y4/video/7532596749643336966" data-video-id="7532596749643336966" style="max-width: 100%;min-width:300px;">
-        <section></section>
-      </blockquote>
     </div>
-    <div class="card" style="padding:0;overflow:hidden">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sanmiguel3y4/video/7530704690435165445" data-video-id="7530704690435165445" style="max-width: 100%;min-width:300px;">
-        <section></section>
-      </blockquote>
-    </div>
-    <div class="card" style="padding:0;overflow:hidden">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sanmiguel3y4/video/7530702230601747768" data-video-id="7530702230601747768" style="max-width: 100%;min-width:300px;">
-        <section></section>
-      </blockquote>
+  </section>
+
+<!-- Servicios -->
+<section id="servicios" class="bg-white border-y border-neutral-200">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <h3 class="text-2xl md:text-3xl font-bold">Servicios principales</h3>
+    <p class="mt-2 text-neutral-700">Soluciones integrales para propietarios, compradores e inversionistas.</p>
+
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Derecho Propietario -->
+      <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3">
+          <!-- Icono FileCheck2 -->
+          <svg class="h-6 w-6 text-emerald-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 6H7a2 2 0 01-2-2V6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v10a2 2 0 01-2 2z"/>
+          </svg>
+          <h4 class="text-lg font-semibold">Derecho Propietario</h4>
+        </div>
+        <p class="mt-3 text-sm text-neutral-700">
+          Obtención y regularización de títulos, folio real y transferencia.
+        </p>
+      </div>
+
+      <!-- Catastro & Municipal -->
+      <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3">
+          <!-- Icono Landmark -->
+          <svg class="h-6 w-6 text-emerald-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l8 8-8 8-8-8 8-8z"/>
+          </svg>
+          <h4 class="text-lg font-semibold">Catastro & Municipal</h4>
+        </div>
+        <p class="mt-3 text-sm text-neutral-700">
+          Planos aprobados, certificados catastrales, numeración y tributos.
+        </p>
+      </div>
+
+      <!-- Revisión Legal -->
+      <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3">
+          <!-- Icono Gavel -->
+          <svg class="h-6 w-6 text-emerald-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2l6 6m0 0l-6 6m6-6H8"/>
+          </svg>
+          <h4 class="text-lg font-semibold">Revisión Legal</h4>
+        </div>
+        <p class="mt-3 text-sm text-neutral-700">
+          Debida diligencia de documentos, minutas, gravámenes y litigios.
+        </p>
+      </div>
+
+      <!-- Saneamiento & INRA -->
+      <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3">
+          <!-- Icono Building2 -->
+          <svg class="h-6 w-6 text-emerald-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21V3h18v18H3z"/>
+          </svg>
+          <h4 class="text-lg font-semibold">Saneamiento & INRA</h4>
+        </div>
+        <p class="mt-3 text-sm text-neutral-700">
+          Regularización de terrenos rústicos y perfeccionamiento de derecho.
+        </p>
+      </div>
+
+      <!-- Representación -->
+      <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3">
+          <!-- Icono Users -->
+          <svg class="h-6 w-6 text-emerald-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M12 12a4 4 0 100-8 4 4 0 000 8z"/>
+          </svg>
+          <h4 class="text-lg font-semibold">Representación</h4>
+        </div>
+        <p class="mt-3 text-sm text-neutral-700">
+          Gestiones ante notaría, Alcaldía, DDRR e INRA en tu nombre.
+        </p>
+      </div>
+
+      <!-- Reventa de Lotes -->
+      <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3">
+          <!-- Icono ShieldCheck -->
+          <svg class="h-6 w-6 text-emerald-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m0-6a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <h4 class="text-lg font-semibold">Reventa de Lotes</h4>
+        </div>
+        <p class="mt-3 text-sm text-neutral-700">
+          Intermediación profesional con comisión competitiva.
+        </p>
+      </div>
+
     </div>
   </div>
-      <!-- Sección Creación de Documento -->
-    <section id="creaciondoc" style="margin-top:28px">
-      <h2>Creación de Documento</h2>
-      <div class="card" style="max-width:500px; margin:0 auto;">
-        <form id="form-documento" 
-              action="https://formspree.io/f/mnnzrqyk" 
-              method="POST">
-
-          <label>Nombre:</label>
-          <input type="text" name="nombre" required placeholder="Tu nombre">
-
-          <label style="margin-top:8px">Correo electrónico:</label>
-          <input type="email" name="correo" required placeholder="correo@ejemplo.com">
-
-          <label style="margin-top:8px">Tipo de documento:</label>
-          <select name="tipo" required>
-            <option value="">Seleccione una opción</option>
-            <option value="contrato">Contrato</option>
-            <option value="carta">Carta</option>
-            <option value="otro">Otro</option>
-          </select>
-
-          <label style="margin-top:8px">Detalles:</label>
-          <textarea name="detalles" rows="4" required placeholder="Describe el documento que necesitas"></textarea>
-
-          <div style="margin-top:12px">
-            <button type="submit" class="btn btn-primary" style="width:100%">Enviar solicitud</button>
-          </div>
-
-          <p id="mensaje-exito" style="color: green; font-weight: bold; display: none; margin-top: 15px; text-align: center;">
-            ✅ ¡Documento solicitado correctamente!
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <script>
-    document.getElementById("form-documento").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      let form = e.target;
-      let datos = new FormData(form);
-
-      fetch(form.action, {
-        method: form.method,
-        body: datos,
-        headers: { 'Accept': 'application/json' }
-      }).then(res => {
-        if (res.ok) {
-          document.getElementById("mensaje-exito").style.display = "block";
-          form.reset();
-        } else {
-          alert("❌ Hubo un error al enviar la solicitud. Inténtalo nuevamente.");
-        }
-      }).catch(() => {
-        alert("⚠ Error de conexión. Por favor revisa tu internet.");
-      });
-    });
-    </script>
+</section>
 
 
-    <section id="contacto" style="margin-top:28px">
-      <h2>Ubicacion</h2>
-      <div class="card contact">
+
+  <!-- Confianza -->
+  <section id="confianza">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <div style="margin-bottom:8px"><strong>Oficina</strong><div style="color:var(--muted)">Av. Viedma #600, Santa Cruz</div></div>
-          <div style="margin-bottom:8px"><strong>Tel</strong><div style="color:var(--muted)">+591 69270000</div></div>
-          <div style="margin-bottom:8px"><strong>Email</strong><div style="color:var(--muted)">molinasrlsm@gmail.com</div></div>
-          <div style="margin-top:12px;border-radius:8px;overflow:hidden">
-<div class="map-container">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!4v1755042281382!6m8!1m7!1stZoszPkdoZ0zCXh1dVa_7A!2m2!1d-17.78895469068037!2d-63.17161621480017!3f332.83970041897874!4f-13.92039760366606!5f0.7820865974627469" 
-    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
+          <h3 class="text-2xl md:text-3xl font-bold">¿Por qué elegir MOLINA SRL?</h3>
+          <ul class="mt-6 space-y-3 text-neutral-800">
+            <li>Abogado interno y gestores expertos</li>
+            <li>Procesos claros y seguimiento en cada etapa</li>
+            <li>Más de 27 años generando confianza</li>
+            <li>Casos reales: títulos y papeles al día</li>
+            <li>Atención rápida por WhatsApp y en oficina</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl border border-neutral-200 p-6 bg-white grid grid-cols-2 gap-4">
+          <div>
+            <p class="text-2xl font-extrabold">+1,200</p>
+            <p class="text-xs text-neutral-600 mt-1">Trámites concluidos</p>
+          </div>
+          <div>
+            <p class="text-2xl font-extrabold">+900</p>
+            <p class="text-xs text-neutral-600 mt-1">Clientes satisfechos</p>
+          </div>
+          <div>
+            <p class="text-2xl font-extrabold">27</p>
+            <p class="text-xs text-neutral-600 mt-1">Años de experiencia</p>
+          </div>
+          <div>
+            <p class="text-2xl font-extrabold">4+</p>
+            <p class="text-xs text-neutral-600 mt-1">Entidades gestionadas</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- Casos -->
+  <section id="casos" class="bg-neutral-50 border-y border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <h3 class="text-2xl md:text-3xl font-bold">Historias reales</h3>
+      <p class="mt-2 text-neutral-700">Clientes que regularizaron su derecho propietario con nosotros.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <p class="text-neutral-800">“Nos ayudaron a obtener el folio real en tiempo récord. Confianza total.”</p>
+          <p class="mt-4 text-sm font-semibold text-neutral-600">Familia Rojas</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <p class="text-neutral-800">“Saneamiento y catastro sin complicaciones. Comunicación excelente.”</p>
+          <p class="mt-4 text-sm font-semibold text-neutral-600">María G.</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <p class="text-neutral-800">“Vendimos nuestro lote con su intermediación. Todo claro y seguro.”</p>
+          <p class="mt-4 text-sm font-semibold text-neutral-600">Jorge & Ana</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-      <div>© Bienes Raices MolinaSRL</div>
-      <div>Desarrollado por: <strong>Molina</strong></div>
+  <!-- Contacto -->
+  <section id="contacto" class="bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold">Contactanos hoy</h3>
+          <p class="mt-2 text-neutral-700">Agenda una consulta y recibe una evaluación de tu caso.</p>
+          <div class="mt-6 space-y-3 text-sm">
+            <p>Teléfono: +591 69270000</p>
+            <p>Email: foronda.pablo@gmail.com</p>
+            <p>Ubicación: Santa Cruz de la Sierra, Bolivia</p>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-neutral-200 bg-white p-6">
+          <form action="https://formspree.io/f/mnnzrqyk" method="POST" class="grid gap-4">
+            <input type="text" name="nombre" placeholder="Tu nombre" required class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2"/>
+            <input type="email" name="email" placeholder="Tu email" required class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2"/>
+            <textarea name="mensaje" placeholder="Cuéntanos tu caso" required class="mt-1 w-full min-h-[120px] rounded-xl border border-neutral-300 px-3 py-2"></textarea>
+            <button type="submit" class="mt-2 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-5 py-3 text-white font-semibold hover:bg-emerald-700">
+              Enviar consulta
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-neutral-600 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© 2025 MOLINA SRL — Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4">
+        <a href="#servicios" class="hover:text-emerald-700">Servicios</a>
+        <a href="#confianza" class="hover:text-emerald-700">Confianza</a>
+        <a href="#contacto" class="hover:text-emerald-700">Contacto</a>
+      </div>
     </div>
   </footer>
-   <script async src="https://www.tiktok.com/embed.js"></script>
+
 </body>
 </html>
